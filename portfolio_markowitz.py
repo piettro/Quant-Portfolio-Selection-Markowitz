@@ -61,17 +61,15 @@ max_sharpe_idx = np.argmax(results[2])
 sdp, rp = results[0, max_sharpe_idx], results[1, max_sharpe_idx]
 max_sharpe_allocation = pd.DataFrame(weights_record[max_sharpe_idx], index=returns.columns, columns=['allocation'])
 max_sharpe_allocation['allocation'] = [round(i * 100, 2) for i in max_sharpe_allocation['allocation']]
+print(max_sharpe_allocation)
 
 plt.figure(figsize=(10, 7))
 plt.scatter(results[0, :], results[1, :], c=results[2, :], cmap='YlGnBu', marker='o')
-plt.colorbar(label='Índice de Sharpe')
-plt.scatter(sdp, rp, marker='*', color='r', s=200, label='Portfólio Máximo Sharpe')
-plt.xlabel('Risco (Desvio Padrão)')
-plt.ylabel('Retorno Esperado')
-plt.title('Fronteira Eficiente - Portfólio de Markowitz')
+plt.colorbar(label='Sharpe Index')
+plt.scatter(sdp, rp, marker='*', color='r', s=200, label='Max Sharpe Portfolio')
+plt.xlabel('Risk')
+plt.ylabel('Expected Return')
+plt.title('Markowitz Portfolio')
 plt.legend(loc='best')
 plt.grid(True)
 plt.show()
-
-print("Alocação Ótima do Portfólio de Máximo Sharpe:")
-print(max_sharpe_allocation)
