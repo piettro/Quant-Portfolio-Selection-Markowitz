@@ -40,21 +40,10 @@ The portfolio with the highest Sharpe Ratio is considered the most efficient, as
 
 The selected assets represent different investment classes:
 
-S&P 500
-^GSPC
-Stocks (US)
-
-Gold
-GC=F
-Commodities
-
-Treasury Yield 5 Years
-^FVX
-Fixed Income
-
-Bitcoin USD
-BTC-USD
-Cryptocurrencies
+S&P 500 | ^GSPC | Stocks (US)
+Gold | GC=F | Commodities
+Treasury Yield 5 Years | ^FVX | Fixed Income
+Bitcoin USD | BTC-USD | Cryptocurrencies
 
 These assets were chosen to ensure diversification, including equities, fixed income, commodities, and cryptocurrencies.
 
